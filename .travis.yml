@@ -1,0 +1,13 @@
+sudo: required
+language: node_js
+node_js:
+  - "5.3"
+before_install:
+  - "curl https://install.meteor.com | /bin/sh"
+deploy:
+  provider: heroku
+  buildpack: https://github.com/AdmitHub/meteor-buildpack-horse
+  api_key:
+    secure: 7cb05821-4d03-49e9-9c60-ba837546e80b
+  app:
+    master: agilidad-travisci

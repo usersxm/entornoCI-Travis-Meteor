@@ -1,0 +1,23 @@
+<head>
+  <title>Taller Integracion Continua</title>
+</head>
+
+<body>
+  <div class="row center-align">
+      <div class="col s12">
+          <div class="card teal lighten-2">
+              <div class="card-content white-text">
+                  <span class="card-title">Ejemplo integración continua</span>
+              </div>
+          </div>
+          <div class="card-action">
+              {{> hello}}
+          </div>
+      </div>
+  </div>
+</body>
+
+<template name="hello">
+  <button class="waves-effect waves-light btn">Click</button>
+  <p>Has presionado <b>{{counter}}</b> veces el botón.{{resultado}}</p>
+</template>
