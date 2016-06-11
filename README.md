@@ -1,7 +1,7 @@
 # AgilidadCI
 Entorno de desarrollo para Meteor con integración continua
 
-[![Build Status](https://travis-ci.com/usersxm/agilidadTravisCI.svg?token=mqVyu3pdVkUAbDyrE1wd&branch=master)](https://travis-ci.com/usersxm/agilidadTravisCI)
+[![Build Status](https://travis-ci.org/usersxm/entornoCI-Travis-Meteor.svg?branch=master)](https://travis-ci.org/usersxm/entornoCI-Travis-Meteor)
 
 ## Solución
 
