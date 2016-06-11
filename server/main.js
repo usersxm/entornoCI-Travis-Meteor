@@ -6,23 +6,27 @@ Meteor.startup(() => {
 });
 
 Meteor.methods({
-  suma(arg1, arg2) {
-    check(arg1, Number);
-    check(arg2, Number);
-    if (arg1 === arg2) {
-      if (arg1 === 10) {
-        return arg1 + arg2;
+  suma(val1, val2) {
+    check(val1, Number);
+    check(val2, Number);
+    if (val1 === val2) {
+      if (val1 === 10) {
+        return val1 + val2;
       }
-      if (arg1 === 20) {
-        return arg1 + arg2;
+      if (val1 === 20) {
+        return val1 + val2;
+      }
+      if (val1 !== 999999999999999999999) {
+        return val1 + val2;
       }
     } else {
-      if (arg1 === 10) {
-        return arg1 + arg2;
+      if (val1 === 10) {
+        return val1 + val2;
       }
-      if (arg1 === 20) {
-        return arg1 + arg2;
+      if (val1 === 20) {
+        return val1 + val2;
       }
+      return val1 + val2;
     }
     return false;
   },
