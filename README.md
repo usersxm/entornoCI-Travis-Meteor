@@ -3,6 +3,9 @@ Entorno de desarrollo para Meteor con integración continua
 
 [![Build Status](https://travis-ci.org/usersxm/entornoCI-Travis-Meteor.svg?branch=master)](https://travis-ci.org/usersxm/entornoCI-Travis-Meteor)
 
+## URL de la API
+[Ejemplo integración continua][apic]
+
 ## Solución
 
 ![Herramientas utilizadas] (http://i.imgur.com/05HUuSO.png "Herramientas")
@@ -19,6 +22,7 @@ Entorno de desarrollo para Meteor con integración continua
 - [Kadira][kad] como herramienta para monitoreo de la aplicacion en produccion, debugger y manejo de errores
 - [Meteor Buildpack Horse][hbp] para poder subir la aplicacion a Heroku
 - [Atom][atm] como IDE
+- [Codacy][cdy] analizador de calidad de codigo
 
 [utr]: https://www.uptimerobot.com
 [ghb]: https://www.github.com
@@ -30,3 +34,5 @@ Entorno de desarrollo para Meteor con integración continua
 [kad]: https://kadira.io
 [hbp]: https://github.com/AdmitHub/meteor-buildpack-horse
 [atm]: https://atom.io
+[cdy]: https://www.codacy.com
+[apic]: http://agilidad-travisci.herokuapp.com
