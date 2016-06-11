@@ -1,13 +1,13 @@
 sudo: required
 language: node_js
 node_js:
-  - "5.3"
+- '5.3'
 before_install:
-  - "curl https://install.meteor.com | /bin/sh"
+- curl https://install.meteor.com | /bin/sh
 deploy:
   provider: heroku
   buildpack: https://github.com/AdmitHub/meteor-buildpack-horse
   api_key:
-    secure: 7cb05821-4d03-49e9-9c60-ba837546e80b
+    secure: Ji1iLdtc0fDkgZjsXxCBVFPNouOeyzhULDX60Oy2XYQTj6YBYmQAENvqKxobWghns4HnhBFC3rPQw2IJxUlzIwsUcSaJd/fhx7mdKrlWsfrq9WngeVm2GY0FDAuwE4IUCLiEk1dA6P9+DSS0UrUDtA7q+OZek+b1JrjB+x1+By+JJ+JROQ3CzZW3ABwsrwJNI7U/KplJT6Tmyrqwv4GhrvEiqz+vUCG3D2DwvvUIvPc3TGnNgt5Z/3vSEwVxwRGUqVxbYI0zMGN+E/6zqfi8lr5TsPczzCrnTo4kIaOPCAUqHc+QUrHiCrn0f0Z69rQY1/8SI1F0YDZywFRvxTq5MvNCVoZP5UfVRfP9MzTcf5yE/WIUkcpToqvxqINZnuuP5Zr89kRjo+aSbendtVvewn2tMQHlvctmw+VKgddbxmC4NWOudEXwRkuxo/D7Buc1s+ppn9daB2kZpdC9mAUQqz+Mr91lf1q5wUMmPzFtaE81Y+DJsmPVqrw74CKXIrV05VPn1y7tjcip+3PWFgj/DBtDXmvfxBWIwg3vz1/oeo2OawEM7v2fJSaF39673/VVlIWF4pKBOEiBAEqt2tDZh/TGjaGYV0nsiXEjgfvdPm8M8zqx/hX2h6Lmp30p9Ln39RQ8AwCEOYXS8llR5CTMf7sRVX57sGKD4RGbUu/+mjg=
   app:
     master: agilidad-travisci
