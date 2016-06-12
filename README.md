@@ -8,7 +8,7 @@ Entorno de desarrollo para Meteor con integración y entraga continua
 
 ## Solución
 
-![Herramientas utilizadas] (http://i.imgur.com/05HUuSO.png "Herramientas")
+![Herramientas utilizadas] (http://i.imgur.com/a9Mh8lI.png "Herramientas")
 
 ## Descripción de herramientas
 
@@ -39,3 +39,4 @@ Entorno de desarrollo para Meteor con integración y entraga continua
 [cdy]: https://www.codacy.com
 [apic]: http://agilidad-travisci.herokuapp.com
 [taig]: https://tree.taiga.io/project/usersxm-agilidad/
+[slk]: https://losmestizosmeteor.slack.com/

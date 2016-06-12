@@ -45,3 +45,11 @@ Template.suma.helpers({
     return Template.instance().resultado.get();
   },
 });
+
+Template.navbar.onRendered(function() {
+  this.$('.button-collapse').sideNav({
+    menuWidth: 300, // Default is 240
+    edge: 'right', // Choose the horizontal origin
+    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+  });
+});
