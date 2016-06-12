@@ -52,20 +52,3 @@ Template.navbar.onRendered(function() {
     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
   });
 });
-
-Router.route('/', function () {
-  this.render('index');
-});
-
-Router.onAfterAction(function() {
-        document.title = 'Taller Integracion Continua';
-      }
-);
-
-Router.route('/index', function () {
-  this.render('index');
-});
-
-Router.route('/aboutus', function () {
-  this.render('aboutus');
-});
