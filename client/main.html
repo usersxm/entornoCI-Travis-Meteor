@@ -22,6 +22,7 @@
         </div>
     </div>
   </body>
+  {{> footera}}
 </template>
 
 <template name="hello">
@@ -74,28 +75,50 @@
     {{> navbar}}
     <div class="col">
       <div class="container col s12">
-        <h1 id="agilidad-integracion-y-entrega-continua">Agilidad Integracion y Entrega Continua</h1>
+        <h2 id="agilidad-integracion-y-entrega-continua">Agilidad Integracion y Entrega Continua</h2>
         <p>Entorno de desarrollo para Meteor con integración y entraga continua</p>
         <p><a href="https://travis-ci.org/usersxm/entornoCI-Travis-Meteor"><img src="https://travis-ci.org/usersxm/entornoCI-Travis-Meteor.svg?branch=master" alt="Build Status" title=""></a> <a href="https://www.codacy.com/app/usersxm10/entornoCI-Travis-Meteor?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=usersxm/entornoCI-Travis-Meteor&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/e2ce8cac52af4fcbb9bc770971ea9bca" alt="Codacy Badge" title=""></a></p>
-        <h2 id="solución">Solución</h2>
+        <h3 id="solución">Solución</h3>
         <p><img data-caption="Herramientas utilizadas en la solucion" class="materialboxed" width="750" src="http://i.imgur.com/a9Mh8lI.png" alt="Herramientas utilizadas" title="Herramientas"></p>
-        <h2 id="descripción-de-herramientas">Descripción de herramientas</h2>
-        <ul>
-          <li><a href="https://www.meteor.com">Meteor</a> como framework de desarrollo web (fullstack)</li>
-          <li><a href="https://www.github.com">Github</a> como herramienta de control de versiones</li>
-          <li><a href="https://www.travis-ci.com">TravisCI</a> como servidor de integración continua</li>
-          <li><a href="https://www.heroku.com">Heroku</a> como servicio PaaS para hostear la aplicación</li>
-          <li><a href="https://www.uptimerobot.com">UPTIMEROBOT</a> para que el servidor (Heroku) no entre en sleep mode</li>
-          <li><a href="http://eslint.org/">ESlint</a> como herramienta de analisis de código estatico</li>
-          <li><a href="https://mochajs.org">Mocha</a> como test framework</li>
-          <li><a href="https://kadira.io">Kadira</a> como herramienta para monitoreo de la aplicacion en produccion, debugger y manejo de errores</li>
-          <li><a href="https://github.com/AdmitHub/meteor-buildpack-horse">Meteor Buildpack Horse</a> para poder subir la aplicacion a Heroku</li>
-          <li><a href="https://atom.io">Atom</a> como IDE</li>
-          <li><a href="https://www.codacy.com">Codacy</a> analizador de calidad de codigo</li>
-          <li><a href="https://tree.taiga.io/project/usersxm-agilidad/">Taiga</a> como herramienta para control de tareas</li>
-          <li><a href="https://losmestizosmeteor.slack.com/">Slack</a> para obtener actualizaciones en tiempo real acerca del estado del proyecto</li>
-        </ul>
+        <h3 id="descripción-de-herramientas">Descripción de herramientas</h3>
+        <div class="collection">
+          <a target="_blank" class="collection-item" href="https://www.meteor.com"><b>Meteor</b> como framework de desarrollo web (fullstack)</a>
+          <a target="_blank" class="collection-item" href="https://www.github.com"><b>Github</b> como herramienta de control de versiones</a>
+          <a target="_blank" class="collection-item" href="https://www.travis-ci.com"><b>TravisCI</b> como servidor de integración continua</a>
+          <a target="_blank" class="collection-item" href="https://www.heroku.com"><b>Heroku</b> como servicio PaaS para hostear la aplicación</a>
+          <a target="_blank" class="collection-item" href="https://www.uptimerobot.com"><b>Uptimerobot</b> para que el servidor (Heroku) no entre en sleep mode</a>
+          <a target="_blank" class="collection-item" href="http://eslint.org/"><b>ESlint</b> como herramienta de analisis de código estatico</a>
+          <a target="_blank" class="collection-item" href="https://mochajs.org"><b>Mocha</b> como test framework</a>
+          <a target="_blank" class="collection-item" href="https://kadira.io"><b>Kadira</b> como herramienta para monitoreo de la aplicacion en produccion, debugger y manejo de errores</a>
+          <a target="_blank" class="collection-item" href="https://github.com/AdmitHub/meteor-buildpack-horse"><b>Meteor Buildpack Horse</b> para poder subir la aplicacion a Heroku</a>
+          <a target="_blank" class="collection-item" href="https://atom.io"><b>Atom</b> como IDE</a>
+          <a target="_blank" class="collection-item" href="https://www.codacy.com"><b>Codacy</b> analizador de calidad de codigo</a>
+          <a target="_blank" class="collection-item" href="https://tree.taiga.io/project/usersxm-agilidad/"><b>Taiga</b> como herramienta para control de tareas</a>
+          <a target="_blank" class="collection-item" href="https://losmestizosmeteor.slack.com/"><b>Slack</b> para obtener actualizaciones en tiempo real acerca del estado del proyecto</a>
+        </div>
       </div>
     </div>
   </body>
+  {{> footera}}
+</template>
+
+<template name="footera">
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Taller de integracion continua</h5>
+          <p class="grey-text text-lighten-4">Donde todos tus sueños se hacen realidad</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      <b>© 2016</b> Todos los derechos reservados <b>Los Mestizos Inc</b>.
+      <a class="grey-text text-lighten-4 right" href="https://github.com/usersxm/entornoCI-Travis-Meteor">Github</a>
+      </div>
+    </div>
+  </footer>
 </template>
