@@ -1,7 +1,7 @@
-# AgilidadCI
-Entorno de desarrollo para Meteor con integración continua
+# Agilidad Integracion y Entrega Continua
+Entorno de desarrollo para Meteor con integración y entraga continua
 
-[![Build Status](https://travis-ci.org/usersxm/entornoCI-Travis-Meteor.svg?branch=master)](https://travis-ci.org/usersxm/entornoCI-Travis-Meteor)
+[![Build Status](https://travis-ci.org/usersxm/entornoCI-Travis-Meteor.svg?branch=master)](https://travis-ci.org/usersxm/entornoCI-Travis-Meteor) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e2ce8cac52af4fcbb9bc770971ea9bca)](https://www.codacy.com/app/usersxm10/entornoCI-Travis-Meteor?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=usersxm/entornoCI-Travis-Meteor&amp;utm_campaign=Badge_Grade)
 
 ## URL de la API
 [Ejemplo integración continua][apic]
