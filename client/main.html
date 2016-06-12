@@ -1,26 +1,27 @@
-<head>
-  <title>Taller Integracion Continua</title>
-  <script src="./jquery-3.0.0.min.js"></script>
-</head>
-
-<body>
-  {{> navbar}}
-  <div class="row center-align">
-      <div class="col s12">
-          <div class="card teal lighten-2">
-              <div class="card-content white-text">
-                  <span class="card-title">Ejemplo integración continua</span>
-              </div>
-          </div>
-          <div class="card-action">
-              {{> hello}}
-          </div>
-      </div>
-      <div class="col s12">
-        {{> suma}}
-      </div>
-  </div>
-</body>
+<template name="index">
+  <head>
+    <title>Taller Integracion Continua</title>
+    <script src="./jquery-3.0.0.min.js"></script>
+  </head>
+  <body>
+    {{> navbar}}
+    <div class="row center-align">
+        <div class="col s12">
+            <div class="card teal lighten-2">
+                <div class="card-content white-text">
+                    <span class="card-title">Ejemplo integración continua</span>
+                </div>
+            </div>
+            <div class="card-action">
+                {{> hello}}
+            </div>
+        </div>
+        <div class="col s12">
+          {{> suma}}
+        </div>
+    </div>
+  </body>
+</template>
 
 <template name="hello">
   <button class="waves-effect waves-light btn">Click</button>
@@ -51,16 +52,26 @@
    <div class="nav-wrapper">
      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
      <ul id="nav-mobile" class="left hide-on-med-and-down">
-       <li><a href="sass.html">Sass</a></li>
-       <li><a href="badges.html">Components</a></li>
-       <li><a href="collapsible.html">JavaScript</a></li>
+       <li><a href="/index">API</a></li>
+       <li><a href="/aboutus">Acerca de</a></li>
      </ul>
      <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+       <li><a href="/index">API</a></li>
+       <li><a href="/aboutus">Acerca de</a></li>
       </ul>
    </div>
  </nav>
+</template>
+
+<template name="aboutus">
+  <head>
+    <title>Taller Integracion Continua</title>
+    <script src="./jquery-3.0.0.min.js"></script>
+  </head>
+  <body>
+    {{> navbar}}
+    <p>
+      Nosotros somos Los Mestizos Inc.
+    </p>
+  </body>
 </template>

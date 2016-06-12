@@ -49,7 +49,23 @@ Template.suma.helpers({
 Template.navbar.onRendered(function() {
   this.$('.button-collapse').sideNav({
     menuWidth: 300, // Default is 240
-    edge: 'right', // Choose the horizontal origin
     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
   });
+});
+
+Router.route('/', function () {
+  this.render('index');
+});
+
+Router.onAfterAction(function() {
+        document.title = 'Taller Integracion Continua';
+      }
+);
+
+Router.route('/index', function () {
+  this.render('index');
+});
+
+Router.route('/aboutus', function () {
+  this.render('aboutus');
 });
