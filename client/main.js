@@ -51,4 +51,9 @@ Template.navbar.onRendered(function() {
     menuWidth: 300, // Default is 240
     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
   });
+  this.$('.materialboxed').materialbox();
+});
+
+Template.aboutus.onRendered(function() {
+  this.$('.materialboxed').materialbox();
 });
