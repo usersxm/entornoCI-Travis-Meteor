@@ -24,6 +24,7 @@ Entorno de desarrollo para Meteor con integración y entraga continua
 - [Atom][atm] como IDE
 - [Codacy][cdy] analizador de calidad de codigo
 - [Taiga][taig] como herramienta para control de tareas
+- [Slack][slk] para obtener actualizaciones en tiempo real acerca del estado del proyecto
 
 [utr]: https://www.uptimerobot.com
 [ghb]: https://www.github.com
