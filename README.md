@@ -23,7 +23,7 @@ Entorno de desarrollo para Meteor con integración y entraga continua
 - [Meteor Buildpack Horse][hbp] para poder subir la aplicacion a Heroku
 - [Atom][atm] como IDE
 - [Codacy][cdy] analizador de calidad de codigo
-- [Taiga][taig] como herramientaa para control de tareas
+- [Taiga][taig] como herramienta para control de tareas
 
 [utr]: https://www.uptimerobot.com
 [ghb]: https://www.github.com
