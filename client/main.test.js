@@ -14,8 +14,15 @@ describe('Test de titulo', function () {
   })
 })
 
-describe('Test de resultado', function () {
-  it('Muestra el resultado correcto de la suma', function () {
+describe('Test de resultado valido', function () {
+  it('Muestra el resultado correcto de la suma si el valor ingresado son numeros', function () {
+    // This code will be executed by the test driver when the app is started
+    // in the correct mode
+  })
+})
+
+describe('Test de resultado invalido', function () {
+  it('Muestra NaN si los datos ingresados no son numeros', function () {
     // This code will be executed by the test driver when the app is started
     // in the correct mode
   })
