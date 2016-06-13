@@ -27,9 +27,8 @@ Template.suma.onCreated(function helloOnCreated() {
 Template.suma.events({
   'submit .nueva-suma'(event, instance) {
     event.preventDefault();
-    const target = event.target;
-    const val1 = Number(target.val1.value);
-    const val2 = Number(target.val2.value);
+    const val1 = Number(event.target.val1.value);
+    const val2 = Number(event.target.val2.value);
     Meteor.call('suma', val1, val2, function(error, result) {
       if (error) {
         alert('Error');
