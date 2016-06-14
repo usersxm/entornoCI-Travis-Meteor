@@ -1,7 +1,3 @@
 node_modules/
 
-client/taller.js
-client/taller.html
-server/taller.js
-
 #agregar al archivo main.html el template de taller
