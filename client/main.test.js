@@ -1,5 +1,4 @@
 /* eslint-disable */
-const assert = require('chai').assert;
 describe('Test de contador', function () {
   it('Incrementa en 1 el contador', function () {
     // This code will be executed by the test driver when the app is started
