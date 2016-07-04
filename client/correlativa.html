@@ -1,0 +1,829 @@
+<template name="correlativas">
+  <head>
+    <title>Taller Integracion Continua</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    {{> navbar}}
+    <div class="col">
+      <div class="container col s12">
+      <style type="text/css">
+         body{
+        font-family:sans-serif;
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top,  #97adb2 0%, #ffffff 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#97adb2), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #97adb2 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #97adb2 0%,#ffffff 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #97adb2 0%,#ffffff 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #97adb2 0%,#ffffff 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#97adb2', endColorstr='#ffffff',GradientType=0); /* IE6-9 */
+        background-repeat:repeat-x;
+        background-size: 1px 200px;
+      }
+      table{
+        border-spacing:1px;
+      }
+
+      td,th{
+        padding:0px 4px 0px 4px;
+        font-size:10pt;
+      }
+      th{
+        background:#444;
+        color:#ffffff
+      }
+      tr:not(.sep):nth-child(even) td{
+        background:#EEE;
+      }
+      tr:not(.sep):nth-child(odd) td{
+        background:#DDD;
+      }
+      tr:not(.sep):hover td{
+        background:#8B8484;
+      }
+      tr.apr td:nth-child(5),tr.apr td:nth-child(6),tr.apr:hover td:nth-child(5),tr.apr:hover td:nth-child(6){
+        background:#063584;
+              color:#ffffff
+      }
+      tr.reg td:nth-child(5),tr.reg:hover td:nth-child(5){
+        background:#2E5DAD;
+              color:#ffffff
+      }
+      tr.n1 td:nth-child(3){
+        padding:0px 4px 0px 1px;
+        border-left:3px red solid;
+        color:red;
+      }
+      tr.n2 td:nth-child(3){
+        background:#EBD07A;
+      }
+      tr:not(.sep) td.ok,tr:not(.sep):hover td.ok{
+        background:#616161;
+      }
+      tr:not(.sep) td:nth-child(7),tr:not(.sep) td:nth-child(8),tr:not(.sep) td:nth-child(9){
+        cursor:pointer;
+      }
+      td.corr div{
+        display:inline-block;
+        border-radius:4px;
+        background:#8CA7E1;
+        margin:0px 2px 0px 2px;
+        padding:0px 4px 0px 4px;
+      }
+      td.corr div.ok{
+        display:inline-block;
+        border-radius:4px;
+        background:#045DF6;
+        margin:0px 2px 0px 2px;
+        padding:0px 4px 0px 4px;
+              color:#ffffff
+      }
+      td>label{
+        width:100%;
+        height:100%;
+        display:block;
+      }
+
+      </style>
+      <div  class='panel'>
+            <h1 class='maincap'>
+                  <span class='title'>Correlativas para I.S.I.</span></h1>
+      <div class='contentbody clearfix'><div style='text-align:center'>
+              <br />La tabla fu&eacute; dise&ntilde;ada con los datos extraidos de la p&aacute;gina de la
+              facultad, los links se los anexan a continuaci&oacute;n.<br />
+              ULTIMA ACTUALIZACION: 3/05/2014<br />
+              <p><a href="http://www.frre.utn.edu.ar/isi/paginas/view/item/regimen_de_correlatividad_2">Ver Original</a></p>
+            <p><a href="http://www.frre.utn.edu.ar/isi/clean/files/get/item/4585">Ver Electivas</a></p>
+      <table class="main_table" id="main_table">
+                <tbody>
+                  <tr>
+                    <th rowspan="2">Orden</th>
+                    <th rowspan="2">Cursado</th>
+                    <th rowspan="2">Asignatura</th>
+                    <th rowspan="2">Hs</th>
+                    <th rowspan="2">Regular</th>
+                    <th rowspan="2">Aprobado</th>
+                    <th colspan="2">Para cursar</th>
+                    <th>Para Rendir</th>
+                  </tr>
+                  <tr>
+                    <th>Cursadas</th>
+                    <th>Aprobadas</th>
+                    <th>Aprobadas</th>
+                  </tr>
+                  <tr class="sep" data-id="0">
+                        <td colspan="4">Nivel 1</td>
+                        <td><label><input type="checkbox">T</label></td>
+                        <td><label><input type="checkbox">T</label></td>
+                      </tr><tr data-id="1" id="m1">
+                          <td>1</td>
+                          <td>Anual</td>
+                          <td>An&aacute;lisis Matem&aacute;tico I</td>
+                          <td>5</td>
+                          <td><label><input type="checkbox" tabindex="1"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="51"> A</label></td>
+                          <td class="corr"></td><td class="corr"></td><td class="corr"></td>
+                        </tr><tr data-id="2" id="m2">
+                          <td>2</td>
+                          <td>Anual</td>
+                          <td>Algebra y G. Anal&iacute;tica</td>
+                          <td>5</td>
+                          <td><label><input type="checkbox" tabindex="2"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="52"> A</label></td>
+                          <td class="corr"></td><td class="corr"></td><td class="corr"></td>
+                        </tr><tr data-id="3" id="m3">
+                          <td>3</td>
+                          <td>Anual</td>
+                          <td>Matem&aacute;tica Discreta</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="3"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="53"> A</label></td>
+                          <td class="corr"></td><td class="corr"></td><td class="corr"></td>
+                        </tr><tr data-id="4" id="m4">
+                          <td>4</td>
+                          <td>Anual</td>
+                          <td>Sistemas y Organizaciones (Int.)</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="4"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="54"> A</label></td>
+                          <td class="corr"></td><td class="corr"></td><td class="corr"></td>
+                        </tr><tr data-id="5" id="m5">
+                          <td>5</td>
+                          <td>Anual</td>
+                          <td>Algoritmos y Est. de Datos</td>
+                          <td>5</td>
+                          <td><label><input type="checkbox" tabindex="5"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="55"> A</label></td>
+                          <td class="corr"></td><td class="corr"></td><td class="corr"></td>
+                        </tr><tr data-id="6" id="m6">
+                          <td>6</td>
+                          <td>Anual</td>
+                          <td>Arquitectura de Computadoras</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="6"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="56"> A</label></td>
+                          <td class="corr"></td><td class="corr"></td><td class="corr"></td>
+                        </tr><tr data-id="7" id="m7">
+                          <td>7</td>
+                          <td>Anual</td>
+                          <td>F&iacute;sica I</td>
+                          <td>5</td>
+                          <td><label><input type="checkbox" tabindex="7"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="57"> A</label></td>
+                          <td class="corr"></td><td class="corr"></td><td class="corr"></td>
+                        </tr><tr data-id="8" id="m8">
+                          <td>8</td>
+                          <td>Anual</td>
+                          <td>Ingl&eacute;s I</td>
+                          <td>2</td>
+                          <td><label><input type="checkbox" tabindex="8"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="58"> A</label></td>
+                          <td class="corr"></td><td class="corr"></td><td class="corr"></td>
+                        </tr><tr class="sep" data-id="1">
+                        <td colspan="4">Nivel 2</td>
+                        <td><label><input type="checkbox">T</label></td>
+                        <td><label><input type="checkbox">T</label></td>
+                      </tr><tr data-id="9" id="m9">
+                          <td>9</td>
+                          <td>2do</td>
+                          <td>Qu&iacute;mica</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="9"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="59"> A</label></td>
+                          <td class="corr"></td><td class="corr"></td><td class="corr"></td>
+                        </tr><tr data-id="10" id="m10">
+                          <td>10</td>
+                          <td>Anual</td>
+                          <td>An&aacute;lisis Matem&aacute;tico II</td>
+                          <td>5</td>
+                          <td><label><input type="checkbox" tabindex="10"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="60"> A</label></td>
+                          <td class="corr"><div>1</div><div>2</div></td><td class="corr"></td><td class="corr"><div>1</div><div>2</div></td>
+                        </tr><tr data-id="11" id="m11">
+                          <td>11</td>
+                          <td>1ro</td>
+                          <td>F&iacute;sica II</td>
+                          <td>5</td>
+                          <td><label><input type="checkbox" tabindex="11"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="61"> A</label></td>
+                          <td class="corr"><div>1</div><div>7</div></td><td class="corr"></td><td class="corr"><div>1</div><div>7</div></td>
+                        </tr><tr data-id="12" id="m12">
+                          <td>12</td>
+                          <td>Anual</td>
+                          <td>An&aacute;lisis de Sistemas (Int.)</td>
+                          <td>6</td>
+                          <td><label><input type="checkbox" tabindex="12"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="62"> A</label></td>
+                          <td class="corr"><div>4</div><div>5</div></td><td class="corr"></td><td class="corr"><div>4</div><div>5</div></td>
+                        </tr><tr data-id="13" id="m13">
+                          <td>13</td>
+                          <td>1ro</td>
+                          <td>Sintaxis y Sem&aacute;ntica de los Lenguaje</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="13"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="63"> A</label></td>
+                          <td class="corr"><div>3</div><div>5</div></td><td class="corr"></td><td class="corr"><div>3</div><div>5</div></td>
+                        </tr><tr data-id="14" id="m14">
+                          <td>14</td>
+                          <td>2do</td>
+                          <td>Paradigmas de Programaci&oacute;n</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="14"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="64"> A</label></td>
+                          <td class="corr"><div>3</div><div>5</div></td><td class="corr"></td><td class="corr"><div>3</div><div>5</div></td>
+                        </tr><tr data-id="15" id="m15">
+                          <td>15</td>
+                          <td>Anual</td>
+                          <td>Sistemas Operativos</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="15"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="65"> A</label></td>
+                          <td class="corr"><div>3</div><div>5</div><div>6</div></td><td class="corr"></td><td class="corr"><div>3</div><div>5</div><div>6</div></td>
+                        </tr><tr data-id="16" id="m16">
+                          <td>16</td>
+                          <td>Anual</td>
+                          <td>Sistemas de Representaci&oacute;n</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="16"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="66"> A</label></td>
+                          <td class="corr"></td><td class="corr"></td><td class="corr"></td>
+                        </tr><tr data-id="E12" id="mE12">
+                          <td>E12</td>
+                          <td>2do</td>
+                          <td>Complejidad y T&eacute;cnicas de Dise&ntilde;o de Algoritmos (Electiva)</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="E12"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>5</div></td><td class="corr"></td><td class="corr"><div>5</div></td>
+                        </tr><tr class="sep" data-id="2">
+                        <td colspan="4">Nivel 3</td>
+                        <td><label><input type="checkbox">T</label></td>
+                        <td><label><input type="checkbox">T</label></td>
+                      </tr><tr data-id="17" id="m17">
+                          <td>17</td>
+                          <td>2do</td>
+                          <td>Probabilidades y Estad&iacute;sticas</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="17"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="67"> A</label></td>
+                          <td class="corr"><div>1</div><div>2</div></td><td class="corr"></td><td class="corr"><div>1</div><div>2</div></td>
+                        </tr><tr data-id="18" id="m18">
+                          <td>18</td>
+                          <td>Anual</td>
+                          <td>Dise&ntilde;o de Sistemas (Int.)</td>
+                          <td>6</td>
+                          <td><label><input type="checkbox" tabindex="18"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="68"> A</label></td>
+                          <td class="corr"><div>12</div><div>14</div></td><td class="corr"><div>3</div><div>4</div><div>5</div></td><td class="corr"><div>12</div><div>14</div></td>
+                        </tr><tr data-id="19" id="m19">
+                          <td>19</td>
+                          <td>1ro</td>
+                          <td>Comunicaciones</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="19"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="69"> A</label></td>
+                          <td class="corr"><div>6</div><div>10</div><div>11</div></td><td class="corr"><div>1</div><div>2</div><div>7</div></td><td class="corr"><div>6</div><div>10</div><div>11</div></td>
+                        </tr><tr data-id="20" id="m20">
+                          <td>20</td>
+                          <td>2do</td>
+                          <td>Matem&aacute;tica Superior</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="20"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="70"> A</label></td>
+                          <td class="corr"><div>10</div></td><td class="corr"><div>1</div><div>2</div></td><td class="corr"><div>10</div></td>
+                        </tr><tr data-id="21" id="m21">
+                          <td>21</td>
+                          <td>1ro</td>
+                          <td>Gesti&oacute;n de Datos</td>
+                          <td>2</td>
+                          <td><label><input type="checkbox" tabindex="21"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="71"> A</label></td>
+                          <td class="corr"><div>12</div><div>13</div><div>14</div></td><td class="corr"><div>3</div><div>4</div><div>5</div></td><td class="corr"><div>12</div><div>13</div><div>14</div></td>
+                        </tr><tr data-id="22" id="m22">
+                          <td>22</td>
+                          <td>Anual</td>
+                          <td>Ingenier&iacute;a y Sociedad</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="22"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="72"> A</label></td>
+                          <td class="corr"></td><td class="corr"></td><td class="corr"></td>
+                        </tr><tr data-id="23" id="m23">
+                          <td>23</td>
+                          <td>1ro</td>
+                          <td>Econom&iacute;a</td>
+                          <td>2</td>
+                          <td><label><input type="checkbox" tabindex="23"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="73"> A</label></td>
+                          <td class="corr"><div>12</div></td><td class="corr"><div>4</div><div>5</div></td><td class="corr"><div>12</div></td>
+                        </tr><tr data-id="24" id="m24">
+                          <td>24</td>
+                          <td>2do</td>
+                          <td>Ingl&eacute;s II</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="24"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="74"> A</label></td>
+                          <td class="corr"></td><td class="corr"><div>8</div></td><td class="corr"></td>
+                        </tr><tr data-id="E1" id="mE1">
+                          <td>E1</td>
+                          <td>2do</td>
+                          <td>Base de Datos Aplicada (Electiva)</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="E1"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>21</div></td><td class="corr"></td><td class="corr"><div>21</div></td>
+                        </tr><tr data-id="E13" id="mE13">
+                          <td>E13</td>
+                          <td>2do</td>
+                          <td>Planificaci&oacute;n (Electiva)</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="E13"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>12</div></td><td class="corr"><div>4</div></td><td class="corr"><div>12</div></td>
+                        </tr><tr class="sep" data-id="3">
+                        <td colspan="4">Nivel 4</td>
+                        <td><label><input type="checkbox">T</label></td>
+                        <td><label><input type="checkbox">T</label></td>
+                      </tr><tr data-id="25" id="m25">
+                          <td>25</td>
+                          <td>2do</td>
+                          <td>Redes de Informaci&oacute;n</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="25"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="75"> A</label></td>
+                          <td class="corr"><div>15</div><div>19</div></td><td class="corr"><div>3</div><div>5</div><div>6</div><div>10</div><div>11</div></td><td class="corr"><div>15</div><div>19</div></td>
+                        </tr><tr data-id="26" id="m26">
+                          <td>26</td>
+                          <td>Anual</td>
+                          <td>Administraci&oacute;n de Recursos (Int.)</td>
+                          <td>6</td>
+                          <td><label><input type="checkbox" tabindex="26"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="76"> A</label></td>
+                          <td class="corr"><div>15</div><div>18</div><div>23</div></td><td class="corr"><div>6</div><div>8</div><div>12</div><div>14</div></td><td class="corr"><div>15</div><div>18</div><div>23</div></td>
+                        </tr><tr data-id="27" id="m27">
+                          <td>27</td>
+                          <td>1ro</td>
+                          <td>Investigaci&oacute;n Operativa</td>
+                          <td>5</td>
+                          <td><label><input type="checkbox" tabindex="27"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="77"> A</label></td>
+                          <td class="corr"><div>17</div><div>20</div></td><td class="corr"><div>10</div></td><td class="corr"><div>17</div><div>20</div></td>
+                        </tr><tr data-id="28" id="m28">
+                          <td>28</td>
+                          <td>1ro</td>
+                          <td>Simulaci&oacute;n</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="28"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="78"> A</label></td>
+                          <td class="corr"><div>17</div><div>20</div></td><td class="corr"><div>10</div></td><td class="corr"><div>17</div><div>20</div></td>
+                        </tr><tr data-id="29" id="m29">
+                          <td>29</td>
+                          <td>2do</td>
+                          <td>Ingenier&iacute;a de software</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="29"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="79"> A</label></td>
+                          <td class="corr"><div>17</div><div>18</div><div>21</div></td><td class="corr"><div>12</div><div>13</div><div>14</div></td><td class="corr"><div>17</div><div>18</div><div>21</div></td>
+                        </tr><tr data-id="30" id="m30">
+                          <td>30</td>
+                          <td>2do</td>
+                          <td>Teor&iacute;a de Control</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="30"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="80"> A</label></td>
+                          <td class="corr"><div>9</div><div>20</div></td><td class="corr"><div>10</div><div>11</div></td><td class="corr"><div>9</div><div>20</div></td>
+                        </tr><tr data-id="31" id="m31">
+                          <td>31</td>
+                          <td>1ro</td>
+                          <td>Legislaci&oacute;n</td>
+                          <td>2</td>
+                          <td><label><input type="checkbox" tabindex="31"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="81"> A</label></td>
+                          <td class="corr"><div>12</div><div>22</div></td><td class="corr"><div>4</div><div>5</div></td><td class="corr"><div>12</div><div>22</div></td>
+                        </tr><tr data-id="E2" id="mE2">
+                          <td>E2</td>
+                          <td>1ro</td>
+                          <td>Aplicaciones Cliente Servidor (Electiva)</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="E2"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>18</div><div>21</div></td><td class="corr"><div>12</div></td><td class="corr"><div>18</div><div>21</div></td>
+                        </tr><tr data-id="E3" id="mE3">
+                          <td>E3</td>
+                          <td>2do</td>
+                          <td>Sistemas de Informaci&oacute;n Geogr&aacute;ficos (Electiva)</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="E3"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>18</div><div>21</div></td><td class="corr"><div>12</div></td><td class="corr"><div>18</div><div>21</div></td>
+                        </tr><tr data-id="E4" id="mE4">
+                          <td>E4</td>
+                          <td>2do</td>
+                          <td>Calidad del Producto y del Proceso Software (Electiva)</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="E4"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>18</div><div>21</div></td><td class="corr"><div>12</div></td><td class="corr"><div>18</div><div>21</div></td>
+                        </tr><tr class="sep" data-id="4">
+                        <td colspan="4">Nivel 5</td>
+                        <td><label><input type="checkbox">T</label></td>
+                        <td><label><input type="checkbox">T</label></td>
+                      </tr><tr data-id="32" id="m32">
+                          <td>32</td>
+                          <td>Anual</td>
+                          <td>Proyecto Final (Int.)</td>
+                          <td>6</td>
+                          <td><label><input type="checkbox" tabindex="32"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="82"> A</label></td>
+                          <td class="corr"><div>25</div><div>26</div><div>29</div><div>31</div></td><td class="corr"><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>21</div><div>22</div><div>23</div><div>24</div></td><td class="corr"><div>25</div><div>29</div><div>30</div><div>31</div><div>33</div><div>34</div><div>35</div><div>36</div><div id="elect">22hs electivas</div></td>
+                        </tr><tr data-id="33" id="m33">
+                          <td>33</td>
+                          <td>1ro</td>
+                          <td>Inteligencia Artificial</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="33"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="83"> A</label></td>
+                          <td class="corr"><div>27</div><div>28</div></td><td class="corr"><div>17</div><div>18</div><div>20</div></td><td class="corr"><div>27</div><div>28</div></td>
+                        </tr><tr data-id="34" id="m34">
+                          <td>34</td>
+                          <td>1ro</td>
+                          <td>Administraci&oacute;n Gerencial</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="34"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="84"> A</label></td>
+                          <td class="corr"><div>26</div><div>27</div></td><td class="corr"><div>15</div><div>17</div><div>18</div><div>20</div><div>23</div></td><td class="corr"><div>26</div><div>27</div></td>
+                        </tr><tr data-id="35" id="m35">
+                          <td>35</td>
+                          <td>1ro</td>
+                          <td>Sistemas de Gesti&oacute;n</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="35"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="85"> A</label></td>
+                          <td class="corr"><div>26</div><div>27</div><div>28</div></td><td class="corr"><div>15</div><div>17</div><div>18</div><div>20</div><div>23</div></td><td class="corr"><div>26</div><div>27</div><div>28</div></td>
+                        </tr><tr data-id="36" id="m36">
+                          <td>36</td>
+                          <td>Anual</td>
+                          <td>Practica Supervisada (P.S.)</td>
+                          <td>6</td>
+                          <td><label><input type="checkbox" tabindex="36"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="86"> A</label></td>
+                          <td class="corr"><div>25</div><div>26</div><div>29</div><div>31</div></td><td class="corr"><div>15</div><div>16</div><div>17</div><div>18</div><div>21</div><div>22</div><div>23</div><div>24</div></td><td class="corr"><div>25</div><div>26</div><div>29</div><div>31</div></td>
+                        </tr><tr data-id="E5" id="mE5">
+                          <td>E5</td>
+                          <td>1ro</td>
+                          <td>Gesti&oacute;n de Seguridad de la Informaci&oacute;n (Electiva)</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="E5"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>25</div><div>29</div></td><td class="corr"><div>18</div><div>21</div></td><td class="corr"><div>25</div><div>29</div></td>
+                        </tr><tr data-id="E6" id="mE6">
+                          <td>E6</td>
+                          <td>2do</td>
+                          <td>Auditor&iacute;a de Sistemas (Electiva)</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="E6"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>26</div><div>29</div></td><td class="corr"><div>18</div></td><td class="corr"><div>26</div><div>29</div></td>
+                        </tr><tr data-id="E7" id="mE7">
+                          <td>E7</td>
+                          <td>2do</td>
+                          <td>Dise&ntilde;o y Desarrollo de Videojuegos (Electiva)</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="E7"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>26</div><div>29</div></td><td class="corr"><div>18</div></td><td class="corr"><div>26</div><div>29</div></td>
+                        </tr><tr data-id="E8" id="mE8">
+                          <td>E8</td>
+                          <td>2do</td>
+                          <td>Emprendimientos Tecnol&oacute;gicos (Electiva)</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="E8"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>26</div></td><td class="corr"><div>18</div></td><td class="corr"><div>26</div></td>
+                        </tr><tr data-id="E9" id="mE9">
+                          <td>E9</td>
+                          <td>2do</td>
+                          <td>Gesti&oacute;n de Servicios e Infraestructuras de TI (Electiva)</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="E9"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>25</div><div>26</div></td><td class="corr"><div>19</div><div>21</div></td><td class="corr"><div>25</div><div>26</div></td>
+                        </tr><tr data-id="E10" id="mE10">
+                          <td>E10</td>
+                          <td>2do</td>
+                          <td>Sistemas de Inteligencia de Negocios y Soporte de Decisiones (Electiva)</td>
+                          <td>3</td>
+                          <td><label><input type="checkbox" tabindex="E10"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>26</div><div>29</div></td><td class="corr"><div>18</div><div>21</div></td><td class="corr"><div>26</div><div>29</div></td>
+                        </tr><tr data-id="E11" id="mE11">
+                          <td>E11</td>
+                          <td>2do</td>
+                          <td>Formaci&oacute;n de Emprendedores (Electiva)</td>
+                          <td>4</td>
+                          <td><label><input type="checkbox" tabindex="E11"> R</label></td>
+                          <td><label><input type="checkbox" tabindex="50"> A</label></td>
+                          <td class="corr"><div>26</div></td><td class="corr"><div>18</div></td><td class="corr"><div>26</div></td>
+                        </tr>					</tbody>
+              </table>
+      </div>
+      </div></div>
+      <script>(function (){
+        var reg=[];
+        var apr=[];
+        var need1=[];
+        var need2=[];
+        var elec=0;
+        var m={'1': {'c1': [],'c2': [],'c3': [],'hs': '5','a1': ['10','11','17'],'a2': ['19','20'],'a3': ['10','11','17']},'2': {'c1': [],'c2': [],'c3': [],'hs': '5','a1': ['10','17'],'a2': ['19','20'],'a3': ['10','17']},'3': {'c1': [],'c2': [],'c3': [],'hs': '3','a1': ['13','14','15'],'a2': ['18','21','25'],'a3': ['13','14','15']},'4': {'c1': [],'c2': [],'c3': [],'hs': '3','a1': ['12'],'a2': ['18','21','23','31','E13'],'a3': ['12']},'5': {'c1': [],'c2': [],'c3': [],'hs': '5','a1': ['12','13','14','15','E12'],'a2': ['18','21','23','25','31'],'a3': ['12','13','14','15','E12']},'6': {'c1': [],'c2': [],'c3': [],'hs': '4','a1': ['15','19'],'a2': ['25','26'],'a3': ['15','19']},'7': {'c1': [],'c2': [],'c3': [],'hs': '5','a1': ['11'],'a2': ['19'],'a3': ['11']},'8': {'c1': [],'c2': [],'c3': [],'hs': '2','a1': [],'a2': ['24','26'],'a3': []},'9': {'c1': [],'c2': [],'c3': [],'hs': '3','a1': ['30'],'a2': [],'a3': ['30']},'10': {'c1': ['1','2'],'c2': [],'c3': ['1','2'],'hs': '5','a1': ['19','20'],'a2': ['25','27','28','30'],'a3': ['19','20']},'11': {'c1': ['1','7'],'c2': [],'c3': ['1','7'],'hs': '5','a1': ['19'],'a2': ['25','30'],'a3': ['19']},'12': {'c1': ['4','5'],'c2': [],'c3': ['4','5'],'hs': '6','a1': ['18','21','23','31','E13'],'a2': ['26','29','E2','E3','E4'],'a3': ['18','21','23','31','E13']},'13': {'c1': ['3','5'],'c2': [],'c3': ['3','5'],'hs': '4','a1': ['21'],'a2': ['29'],'a3': ['21']},'14': {'c1': ['3','5'],'c2': [],'c3': ['3','5'],'hs': '4','a1': ['18','21'],'a2': ['26','29'],'a3': ['18','21']},'15': {'c1': ['3','5','6'],'c2': [],'c3': ['3','5','6'],'hs': '4','a1': ['25','26'],'a2': ['32','34','35','36'],'a3': ['25','26']},'16': {'c1': [],'c2': [],'c3': [],'hs': '3','a1': [],'a2': ['32','36'],'a3': []},'E12': {'c1': ['5'],'c2': [],'c3': ['5'],'hs': '3','a1': [],'a2': [],'a3': []},'17': {'c1': ['1','2'],'c2': [],'c3': ['1','2'],'hs': '3','a1': ['27','28','29'],'a2': ['32','33','34','35','36'],'a3': ['27','28','29']},'18': {'c1': ['12','14'],'c2': ['3','4','5'],'c3': ['12','14'],'hs': '6','a1': ['26','29','E2','E3','E4'],'a2': ['32','33','34','35','36','E5','E6','E7','E8','E10','E11'],'a3': ['26','29','E2','E3','E4']},'19': {'c1': ['6','10','11'],'c2': ['1','2','7'],'c3': ['6','10','11'],'hs': '4','a1': ['25'],'a2': ['32','E9'],'a3': ['25']},'20': {'c1': ['10'],'c2': ['1','2'],'c3': ['10'],'hs': '4','a1': ['27','28','30'],'a2': ['33','34','35'],'a3': ['27','28','30']},'21': {'c1': ['12','13','14'],'c2': ['3','4','5'],'c3': ['12','13','14'],'hs': '2','a1': ['29','E1','E2','E3','E4'],'a2': ['32','36','E5','E9','E10'],'a3': ['29','E1','E2','E3','E4']},'22': {'c1': [],'c2': [],'c3': [],'hs': '3','a1': ['31'],'a2': ['32','36'],'a3': ['31']},'23': {'c1': ['12'],'c2': ['4','5'],'c3': ['12'],'hs': '2','a1': ['26'],'a2': ['32','34','35','36'],'a3': ['26']},'24': {'c1': [],'c2': ['8'],'c3': [],'hs': '4','a1': [],'a2': ['32','36'],'a3': []},'E1': {'c1': ['21'],'c2': [],'c3': ['21'],'hs': '4','a1': [],'a2': [],'a3': []},'E13': {'c1': ['12'],'c2': ['4'],'c3': ['12'],'hs': '3','a1': [],'a2': [],'a3': []},'25': {'c1': ['15','19'],'c2': ['3','5','6','10','11'],'c3': ['15','19'],'hs': '4','a1': ['32','36','E5','E9'],'a2': [],'a3': ['32','36','E5','E9']},'26': {'c1': ['15','18','23'],'c2': ['6','8','12','14'],'c3': ['15','18','23'],'hs': '6','a1': ['32','34','35','36','E6','E7','E8','E9','E10','E11'],'a2': [],'a3': ['34','35','36','E6','E7','E8','E9','E10','E11']},'27': {'c1': ['17','20'],'c2': ['10'],'c3': ['17','20'],'hs': '5','a1': ['33','34','35'],'a2': [],'a3': ['33','34','35']},'28': {'c1': ['17','20'],'c2': ['10'],'c3': ['17','20'],'hs': '4','a1': ['33','35'],'a2': [],'a3': ['33','35']},'29': {'c1': ['17','18','21'],'c2': ['12','13','14'],'c3': ['17','18','21'],'hs': '3','a1': ['32','36','E5','E6','E7','E10'],'a2': [],'a3': ['32','36','E5','E6','E7','E10']},'30': {'c1': ['9','20'],'c2': ['10','11'],'c3': ['9','20'],'hs': '3','a1': [],'a2': [],'a3': ['32']},'31': {'c1': ['12','22'],'c2': ['4','5'],'c3': ['12','22'],'hs': '2','a1': ['32','36'],'a2': [],'a3': ['32','36']},'E2': {'c1': ['18','21'],'c2': ['12'],'c3': ['18','21'],'hs': '4','a1': [],'a2': [],'a3': []},'E3': {'c1': ['18','21'],'c2': ['12'],'c3': ['18','21'],'hs': '4','a1': [],'a2': [],'a3': []},'E4': {'c1': ['18','21'],'c2': ['12'],'c3': ['18','21'],'hs': '4','a1': [],'a2': [],'a3': []},'32': {'c1': ['25','26','29','31'],'c2': ['15','16','17','18','19','21','22','23','24'],'c3': ['25','29','30','31','33','34','35','36'],'hs': '6','a1': [],'a2': [],'a3': []},'33': {'c1': ['27','28'],'c2': ['17','18','20'],'c3': ['27','28'],'hs': '3','a1': [],'a2': [],'a3': ['32']},'34': {'c1': ['26','27'],'c2': ['15','17','18','20','23'],'c3': ['26','27'],'hs': '3','a1': [],'a2': [],'a3': ['32']},'35': {'c1': ['26','27','28'],'c2': ['15','17','18','20','23'],'c3': ['26','27','28'],'hs': '4','a1': [],'a2': [],'a3': ['32']},'36': {'c1': ['25','26','29','31'],'c2': ['15','16','17','18','21','22','23','24'],'c3': ['25','26','29','31'],'hs': '6','a1': [],'a2': [],'a3': ['32']},'E5': {'c1': ['25','29'],'c2': ['18','21'],'c3': ['25','29'],'hs': '4','a1': [],'a2': [],'a3': []},'E6': {'c1': ['26','29'],'c2': ['18'],'c3': ['26','29'],'hs': '4','a1': [],'a2': [],'a3': []},'E7': {'c1': ['26','29'],'c2': ['18'],'c3': ['26','29'],'hs': '3','a1': [],'a2': [],'a3': []},'E8': {'c1': ['26'],'c2': ['18'],'c3': ['26'],'hs': '4','a1': [],'a2': [],'a3': []},'E9': {'c1': ['25','26'],'c2': ['19','21'],'c3': ['25','26'],'hs': '4','a1': [],'a2': [],'a3': []},'E10': {'c1': ['26','29'],'c2': ['18','21'],'c3': ['26','29'],'hs': '3','a1': [],'a2': [],'a3': []},'E11': {'c1': ['26'],'c2': ['18'],'c3': ['26'],'hs': '4','a1': [],'a2': [],'a3': []}};
+        var aprobado = function (e){
+          var i = e.target;
+          var c = i.checked;
+          while(i.tagName!='TR'){
+            i=i.parentNode;
+          }
+          if(c){
+            aprobar(i);
+          }
+          else{
+            desaprobar(i);
+          }
+        };
+        var regular = function (e){
+          var i = e.target;
+          var c = i.checked;
+          while(i.tagName!='TR'){
+            i=i.parentNode;
+          }
+          if(c){
+            regularizar(i);
+          }
+          else{
+            deregularizar(i);
+          }
+        };
+        var aprobar_todo = function (e){
+          var i = e.target;
+          var c = i.checked;
+          while(i.tagName!='TR'){
+            i=i.parentNode;
+          }
+          if(c){
+            do{
+              i=i.nextElementSibling;
+              if(!i||!i.id) break;
+              aprobar(i);
+            }while(true);
+          }
+          else{
+            do{
+              i=i.nextElementSibling;
+              if(!i||!i.id) break;
+              desaprobar(i);
+            }while(true);
+          }
+        };
+        var regular_todo = function (e){
+          var i = e.target;
+          var c = i.checked;
+          while(i.tagName!='TR'){
+            i=i.parentNode;
+          }
+          if(c){
+            do{
+              i=i.nextElementSibling;
+              if(!i||!i.id) break;
+              regularizar(i);
+            }while(true);
+          }
+          else{
+            do{
+              i=i.nextElementSibling;
+              if(!i||!i.id) break;
+              deregularizar(i);
+            }while(true);
+          }
+        };
+        var updcolors = function (p){
+          var r = '';
+          var q = getid(p);
+          if(apr.indexOf(q) != -1)
+            r += ' apr';
+          else if(reg.indexOf(q) != -1)
+            r += ' reg';
+          if(need1.indexOf(q) != -1)
+            r += ' n1';
+          if(need2.indexOf(q) != -1)
+            r += ' n2';
+          p.className=r;
+        };
+        var regularizar = function (tr){
+          var q = getid(tr);
+          if(reg.indexOf(q) == -1){
+            reg.push(q);
+            tr.children[4].firstElementChild.firstElementChild.checked = true;
+            for(var i = 0;i < m[q]['a1'].length;++i){
+              var ntr = document.getElementById('m'+m[q]['a1'][i]);
+              if(!ntr) continue;
+              var nr = ntr.children[6].firstElementChild;
+              while(nr){
+                if(nr.firstChild.nodeValue == q)
+                  nr.className='ok';
+                nr=nr.nextElementSibling;
+              }
+              updcolors(ntr);
+            }
+            updcolors(tr);
+          }
+        };
+        var deregularizar = function (tr){
+          desaprobar(tr);
+          var q = getid(tr);
+          var j = reg.indexOf(q);
+          if(j != -1){
+            reg.splice(j,1);
+            tr.children[4].firstElementChild.firstElementChild.checked = false;
+            for(var i = 0;i < m[q]['a1'].length;++i){
+              var ntr = document.getElementById('m'+m[q]['a1'][i]);
+              if(!ntr) continue;
+              var nr = ntr.children[6].firstElementChild;
+              while(nr){
+                if(nr.firstChild.nodeValue == q)
+                  nr.className=null;
+                nr=nr.nextElementSibling;
+              }
+              updcolors(ntr);
+            }
+            updcolors(tr);
+          }
+        };
+        var aprobar = function (tr){
+          regularizar(tr);
+          var q = getid(tr);
+          if(apr.indexOf(q) == -1){
+            apr.push(q);
+            if(q[0] == 'E'){
+              var aelec = elec;
+              elec += parseInt(m[q]['hs'],10);
+              if(aelec < 22 && elec >= 22)
+                document.getElementById('elect').className='ok';
+            }
+            tr.children[5].firstElementChild.firstElementChild.checked = true;
+            for(var i = 0;i < m[q]['a2'].length;++i){
+              var ntr = document.getElementById('m'+m[q]['a2'][i]);
+              if(!ntr) continue;
+              var nr = ntr.children[7].firstElementChild;
+              while(nr){
+                if(nr.firstChild.nodeValue == q)
+                  nr.className='ok';
+                nr=nr.nextElementSibling;
+              }
+              updcolors(ntr);
+            }
+            for(var i = 0;i < m[q]['a3'].length;++i){
+              var ntr = document.getElementById('m'+m[q]['a3'][i]);
+              if(!ntr) continue;
+              var nr = ntr.children[8].firstElementChild;
+              while(nr){
+                if(nr.firstChild.nodeValue == q)
+                  nr.className='ok';
+                nr=nr.nextElementSibling;
+              }
+              updcolors(ntr);
+            }
+            updcolors(tr);
+          }
+        };
+        var desaprobar = function (tr){
+          var q = getid(tr);
+          var j = apr.indexOf(q);
+          if(j != -1){
+            apr.splice(j,1);
+            if(q[0] == 'E'){
+              var aelec = elec;
+              elec -= parseInt(m[q]['hs'],10);
+              if(aelec >= 22 && elec < 22){
+                document.getElementById('elect').className=null;
+              }
+            }
+            tr.children[5].firstElementChild.firstElementChild.checked = false;
+            for(var i = 0;i < m[q]['a2'].length;++i){
+              var ntr = document.getElementById('m'+m[q]['a2'][i]);
+              if(!ntr) continue;
+              var nr = ntr.children[7].firstElementChild;
+              while(nr){
+                if(nr.firstChild.nodeValue == q)
+                  nr.className='corr';
+                nr=nr.nextElementSibling;
+              }
+              updcolors(ntr);
+            }
+            for(var i = 0;i < m[q]['a3'].length;++i){
+              var ntr = document.getElementById('m'+m[q]['a3'][i]);
+              if(!ntr) continue;
+              var nr = ntr.children[8].firstElementChild;
+              while(nr){
+                if(nr.firstChild.nodeValue == q)
+                  nr.className='corr';
+                nr=nr.nextElementSibling;
+              }
+              updcolors(ntr);
+            }
+            updcolors(tr);
+          }
+        };
+        var getid = function (i){
+          return (i.dataset) ? i.dataset.id : i.getAttribute('data-id');
+        };
+        var in_corr = function (e,n){
+          var tr = e.target;
+          while(tr.tagName!='TR')
+            tr=tr.parentNode;
+          var q = getid(tr);
+          for(var i = 0;i < m[q]['c'+n].length;++i){
+            need1.push(m[q]['c'+n][i]);
+            updcolors(document.getElementById('m'+m[q]['c'+n][i]));
+          }
+        };
+        var out_corr = function (e,n){
+          var tr = e.target;
+          while(tr.tagName!='TR')
+            tr=tr.parentNode;
+          var q = getid(tr);
+          for(var i = 0;i < m[q]['c'+n].length;++i){
+            var j = need1.indexOf(m[q]['c'+n][i]);
+            need1.splice(j,1);
+            updcolors(document.getElementById('m'+m[q]['c'+n][i]));
+          }
+        };
+        var cl_corr = function (e,z){
+          var tr = e.target;
+          var c = false;
+          while(tr.tagName!='TR'){
+            if(tr.tagName == 'TD'){
+              if(tr.className == 'corr ok'){
+                c = false;
+                tr.className = 'corr';
+              }
+              else{
+                c = true;
+                tr.className = 'corr ok';
+              }
+            }
+            tr=tr.parentNode;
+          }
+          var q = getid(tr);
+          if(c){
+            for(var i = 0;i < m[q]['c'+z].length;++i){
+              need2.push(m[q]['c'+z][i]);
+              updcolors(document.getElementById('m'+m[q]['c'+z][i]));
+            }
+          }
+          else{
+            for(var i = 0;i < m[q]['c'+z].length;++i){
+              var j = need2.indexOf(m[q]['c'+z][i]);
+              need2.splice(j,1);
+              updcolors(document.getElementById('m'+m[q]['c'+z][i]));
+            }
+          }
+        };
+        var in_corr1 = function (e){return in_corr(e,1);};
+        var in_corr2 = function (e){return in_corr(e,2);};
+        var in_corr3 = function (e){return in_corr(e,3);};
+        var out_corr1 = function (e){return out_corr(e,1);};
+        var out_corr2 = function (e){return out_corr(e,2);};
+        var out_corr3 = function (e){return out_corr(e,3);};
+        var cl_corr1 = function (e){return cl_corr(e,1);};
+        var cl_corr2 = function (e){return cl_corr(e,2);};
+        var cl_corr3 = function (e){return cl_corr(e,3);};
+        {
+          var tr = document.getElementById('main_table').firstElementChild.firstElementChild;
+          while(tr){
+            if(tr.id){
+              tr.children[4].onclick=regular;
+              tr.children[5].onclick=aprobado;
+              var a = tr.children[6];
+              a.onmouseover=in_corr1;
+              a.onmouseout=out_corr1;
+              a.onclick=cl_corr1;
+              a = tr.children[7];
+              a.onmouseover=in_corr2;
+              a.onmouseout=out_corr2;
+              a.onclick=cl_corr2;
+              a = tr.children[8];
+              a.onmouseover=in_corr3;
+              a.onmouseout=out_corr3;
+              a.onclick=cl_corr3;
+            }
+            else if(tr.className == 'sep'){
+              tr.children[1].onclick=regular_todo;
+              tr.children[2].onclick=aprobar_todo;
+            }
+            tr=tr.nextElementSibling;
+          }
+        }
+      })();</script>
+      </div>
+    </div>
+  </body>
+  {{> footera}}
+</template>

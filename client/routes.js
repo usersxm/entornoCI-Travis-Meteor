@@ -17,3 +17,7 @@ Router.route('/index', function () {
 Router.route('/aboutus', function () {
   this.render('aboutus');
 });
+
+Router.route('/correlativas', function () {
+  this.render('correlativas');
+});
